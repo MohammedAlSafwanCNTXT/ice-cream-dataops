@@ -21,7 +21,7 @@ variables:
         icapi_extractors_client_id: ${ICAPI_EXTRACTORS_CLIENT_ID}
         icapi_extractors_client_secret: ${ICAPI_EXTRACTORS_CLIENT_SECRET}
         icapi_extractors_pause_transformations: False
-        icapi_extractors_scheduleHourly: '0 0 * * *'
+        # icapi_extractors_scheduleHourly: "*/1 * * * *"
       use_cases:
         oee:
           data_pipeline_oee_source_id: 7a7a97ea-78e1-4f44-8e16-3b8646f9a81b
