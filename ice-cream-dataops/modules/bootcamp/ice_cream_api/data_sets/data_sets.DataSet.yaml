@@ -1,4 +1,4 @@
-- externalId: {{ icapi_ds_external_id }}
+- externalId: "{{ icapi_ds_external_id }}"
   name: Ice Cream Factory Dataset
   description: This dataset contains data from the ice cream factory.
   writeProtected: false
