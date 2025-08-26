@@ -1,8 +1,4 @@
 externalId: ICAPI Assets
 credentials:
-  clientId: {{ icapi_extractors_client_id }}
-  clientSecret: {{ icapi_extractors_client_secret }}
   clientId: {{idp_client_id}}
   clientSecret: {{idp_client_secret}}
-  tokenUrl: {{tokenUri}}
-  scopes: {{scopes}}

@@ -1,11 +1,5 @@
 type: rest
-externalId: Ice Cream Factory API prod
+externalId: Ice Cream Factory API
 host: ice-cream-factory.inso-internal.cognite.ai
 scheme: https
 port: 443
-authentication:
-  type: clientCredentials
-  clientId: {{idp_client_id}}
-  clientSecret: {{idp_client_secret}}
-  tokenUrl: {{tokenUri}}
-  scopes: {{scopes}}
