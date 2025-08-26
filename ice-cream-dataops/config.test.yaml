@@ -11,6 +11,8 @@ variables:
   modules:
     bootcamp:
       # Variables shared by modules
+      idp_client_id: ${IDP_CLIENT_ID}
+      idp_client_secret: ${IDP_CLIENT_SECRET}
       icapi_ds_external_id: ds_icapi
       icapi_space_name: icapi_dm_space
       ice_cream_api:
