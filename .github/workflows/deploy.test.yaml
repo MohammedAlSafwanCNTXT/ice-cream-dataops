@@ -1,11 +1,8 @@
 name: Deploy Toolkit
 on:
-  push:
+  pull_request:
     branches:
-      - main
-    paths:
-      - ice-cream-dataops/**
-  workflow_dispatch:
+      - '*'
 
 env:
   PYTHON_VERSION: '3.11'
@@ -17,7 +14,6 @@ jobs:
       matrix:
         environment:
           - test
-          - prod
     environment: ${{ matrix.environment }}
     runs-on: ubuntu-latest
     env:
@@ -36,6 +32,8 @@ jobs:
       ICAPI_EXTRACTORS_CLIENT_ID: ${{ vars.ICAPI_EXTRACTORS_CLIENT_ID }}
       ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
 
+      DATA_DEVELOPER_SOURCE_ID: ${{ vars.DATA_DEVELOPER_SOURCE_ID }}
+      
     name: Build & Deploy
     steps:
       - uses: actions/checkout@v4
