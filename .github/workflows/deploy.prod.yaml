@@ -10,7 +10,7 @@ on:
 env:
   PYTHON_VERSION: '3.11'
   # Change the TOOLKIT_VERSION depending on which version you are using
-  TOOLKIT_VERSION: '0.6.6'
+  TOOLKIT_VERSION: '0.5.30'
 jobs:
   build-modules:
     strategy:
@@ -36,7 +36,7 @@ jobs:
       ICAPI_EXTRACTORS_CLIENT_SECRET: ${{ secrets.ICAPI_EXTRACTORS_CLIENT_SECRET }}
 
       DATA_DEVELOPER_SOURCE_ID: ${{ vars.DATA_DEVELOPER_SOURCE_ID }}
-      
+
     name: Build & Deploy
     steps:
       - uses: actions/checkout@v4
