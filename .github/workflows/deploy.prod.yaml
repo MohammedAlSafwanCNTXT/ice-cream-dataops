@@ -2,7 +2,7 @@ name: Deploy Toolkit
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - ice-cream-dataops/**
   workflow_dispatch:
@@ -16,7 +16,6 @@ jobs:
     strategy:
       matrix:
         environment:
-          - test
           - prod
     environment: ${{ matrix.environment }}
     runs-on: ubuntu-latest
